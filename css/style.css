@@ -417,7 +417,7 @@
 }
 
 .bg-breadcrumb {
-    animation: slideBackground 24s infinite; /* 24 seconds for a full cycle */
+    animation: slideBackground 12s infinite; /* 12 seconds for a full cycle */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
