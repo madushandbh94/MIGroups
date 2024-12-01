@@ -393,18 +393,57 @@
 
 
 /*** Single Page Hero Header Start ***/
+@keyframes slideBackground {
+    0% {
+        background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-01.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    33% {
+        background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-02.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    66% {
+        background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-03.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    100% {
+        background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-04.png);
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
 .bg-breadcrumb {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/installation_home.jpg);
-    background-position: center center;
+    animation: slideBackground 24s infinite; /* 24 seconds for a full cycle */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     padding: 150px 0 50px 0;
 }
 
-.bg-breadcrumb .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+/* Media Queries for Fine-Tuning on Smaller Devices */
+@media (max-width: 1200px) {
+    .bg-breadcrumb {
+        padding: 12vw 0;
+    }
 }
+
+@media (max-width: 768px) {
+    .bg-breadcrumb {
+        padding: 15vw 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .bg-breadcrumb {
+        padding: 18vw 0;
+        background-attachment: scroll; /* Prevents jitter on smaller devices */
+    }
+}
+
 /*** Single Page Hero Header End ***/
 
 
