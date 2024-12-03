@@ -212,5 +212,151 @@ body {
     margin-bottom: 20px;
     /* You can add other slide-specific styles here */
 }
-
 /* contact us end */
+
+/* Main about section Start */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Expandable Content Container */
+#expandable-content {
+    margin: 20px auto;
+    max-width: 90%;
+    width: 800px;
+    padding: 20px;
+    background: #ffffff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#expandable-content:hover {
+    transform: scale(1.02);
+}
+
+/* Heading Styles */
+#expandable-content h3 {
+    font-size: 24px;
+    color: #007bb5; /* Blue heading color */
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#expandable-content h4 {
+    font-size: 20px;
+    color: #0288d1; /* Lighter blue for subheadings */
+    margin-top: 15px;
+}
+
+/* Paragraph Styles */
+#expandable-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* List Styles */
+#expandable-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#expandable-content ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Custom Bullet Points */
+#expandable-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0288d1;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Highlighted Text */
+#expandable-content strong {
+    color: #007bb5;
+}
+
+/* Emphasized Text */
+#expandable-content em {
+    font-style: italic;
+    color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #expandable-content {
+        padding: 15px;
+    }
+    
+    #expandable-content h3 {
+        font-size: 20px;
+    }
+
+    #expandable-content h4 {
+        font-size: 18px;
+    }
+
+    #expandable-content p,
+    #expandable-content ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #expandable-content {
+        padding: 10px;
+    }
+    
+    #expandable-content h3 {
+        font-size: 18px;
+    }
+
+    #expandable-content h4 {
+        font-size: 16px;
+    }
+
+    #expandable-content p,
+    #expandable-content ul li {
+        font-size: 12px;
+    }
+}
+
+/* Animation for Content Fade-in */
+.hidden-content {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main about section End */
