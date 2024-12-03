@@ -397,31 +397,66 @@
     0% {
         background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-01.jpg);
         background-position: center center;
-        background-size: cover;
+        background-size: 100%;
+        opacity: 1;
     }
-    33% {
+    25% {
+        background-size: 105%; /* Slight zoom effect */
+        opacity: 1;
+    }
+    26% {
         background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-02.jpg);
         background-position: center center;
-        background-size: cover;
+        background-size: 95%; /* Start new image slightly smaller */
+        opacity: 0.5; /* Start slightly transparent */
     }
-    66% {
+    30% {
+        background-size: 100%; /* Scale up to full size */
+        opacity: 1; /* Fade in to full opacity */
+    }
+    50% {
+        background-size: 105%; /* Slight zoom effect */
+        opacity: 1;
+    }
+    51% {
         background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-03.jpg);
         background-position: center center;
-        background-size: cover;
+        background-size: 95%;
+        opacity: 0.5;
     }
-    100% {
+    55% {
+        background-size: 100%;
+        opacity: 1;
+    }
+    75% {
+        background-size: 105%;
+        opacity: 1;
+    }
+    76% {
         background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-04.png);
         background-position: center center;
-        background-size: cover;
+        background-size: 95%;
+        opacity: 0.5;
+    }
+    80% {
+        background-size: 100%;
+        opacity: 1;
+    }
+    100% {
+        background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/header_slide-01.jpg); /* Loop back to the first image */
+        background-position: center center;
+        background-size: 100%; /* Reset size for looping */
+        opacity: 1; /* Fully visible to prevent any break */
     }
 }
 
 .bg-breadcrumb {
-    animation: slideBackground 12s infinite; /* 12 seconds for a full cycle */
+    animation: slideBackground 32s infinite; /* Full animation cycle for 4 images */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 150px 0 50px 0;
+    transition: background-size 1.5s ease-in-out;
 }
 
 /* Media Queries for Fine-Tuning on Smaller Devices */
