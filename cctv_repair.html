@@ -548,49 +548,10 @@
         -->
         <!-- Subscribe End -->
 
-        
-<!--Snow Start-->
-<script>
-    // Add snowflakes to your existing website dynamically
-    for (let i = 0; i < 100; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = Math.random() * window.innerWidth + 'px';
-        snowflake.style.width = snowflake.style.height = Math.random() * 8 + 4 + 'px';
-        snowflake.style.animationDuration = Math.random() * 5 + 3 + 's';
-        snowflake.style.animationDelay = Math.random() * 5 + 's';
-        document.body.appendChild(snowflake);
-    }
-</script>
-
-<style>
-    body {
-        position: relative; /* Allow snowflakes to be positioned independently */
-    }
-
-    .snowflake {
-        position: fixed; /* Keeps snowflakes visible while scrolling */
-        top: -10px;
-        background: radial-gradient(circle, rgba(173,216,230,1) 0%, rgba(173,216,230,0) 70%);
-        border-radius: 50%;
-        opacity: 0.9;
-        animation: fall linear infinite;
-        pointer-events: none; /* Prevent snowflakes from interfering with clicks */
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(100vh);
-        }
-    }
-</style>
-<!--Snow End-->
-
         <!-- Footer Start -->
         <div id="footer-placeholder"></div>
         <!-- Footer End -->
-        
-      
+            
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
